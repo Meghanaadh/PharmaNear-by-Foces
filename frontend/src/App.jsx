@@ -1,5 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import './App.css';
+
+import AboutUs from "./components/AboutUs.jsx";
+import Services from "./components/Services.jsx";
+import Contact from "./components/Contact.jsx";
+import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
+import TermsOfService from "./components/TermsOfService.jsx";
 import FirstPage from './components/FirstPage.jsx';
 import MapPage from './components/MapPage.jsx';
 import PharmacyAdmin from './components/PharmacyAdmin.jsx';
@@ -14,6 +21,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<FirstPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/mappage" element={<MapPage />} />
         <Route path="/pharmacy" element={<PharmacyPage />} />
         <Route path="/pharmacy/admin" element={<PharmacyAdmin />} />
